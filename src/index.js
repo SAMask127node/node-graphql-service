@@ -4,10 +4,11 @@ const resolvers = require("./resolvers");
 
 const UserAPI = require("../app/modules/users/service/user-api");
 const GenreAPI = require("../app/modules/genres/service/genre-api");
-const AlbumAPI = require("../app/modules/genres/service/album-api");
-const ArtistAPI = require("../app/modules/genres/service/artist-api");
-const BandAPI = require("../app/modules/genres/service/band-api");
-const TrackAPI = require("../app/modules/genres/service/track-api");
+const AlbumAPI = require("../app/modules/albums/service/album-api");
+const ArtistAPI = require("../app/modules/artists/service/artist-api");
+const BandAPI = require("../app/modules/bands/service/band-api");
+const TrackAPI = require("../app/modules/tracks/service/track-api");
+const FavouritesAPI = require("../app/modules/favourites/service/favourites-api");
 
 const server = new ApolloServer({
   typeDefs,
@@ -26,6 +27,7 @@ const server = new ApolloServer({
       artistAPI: new ArtistAPI(),
       bandAPI: new BandAPI(),
       trackAPI: new TrackAPI(),
+      favouritesAPI: new FavouritesAPI(),
     };
   },
 });

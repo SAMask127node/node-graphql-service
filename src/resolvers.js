@@ -5,6 +5,7 @@ const albumResolvers = require("../app/modules/albums/controller/resolvers");
 const bandResolvers = require("../app/modules/bands/controller/resolvers");
 const artistResolvers = require("../app/modules/artists/controller/resolvers");
 const trackResolvers = require("../app/modules/tracks/controller/resolvers");
+const favouritesResolvers = require("../app/modules/favourites/controller/resolvers");
 
 // const resolvers = {
 //   Query: genreResolvers.Query,
@@ -16,7 +17,8 @@ const resolvers = _.merge(
   albumResolvers,
   bandResolvers,
   artistResolvers,
-  trackResolvers
+  trackResolvers,
+  favouritesResolvers
 );
 
 module.exports = resolvers;
