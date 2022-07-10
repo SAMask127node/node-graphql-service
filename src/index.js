@@ -2,8 +2,8 @@ const { ApolloServer } = require("apollo-server");
 const typeDefs = require("./schema");
 const resolvers = require("./resolvers");
 
-// const UserAPI = require("../app/modules/users/service/user-api");
-const GenreAPI = require("./datasources/genre-api");
+const UserAPI = require("../app/modules/users/service/user-api");
+const GenreAPI = require("../app/modules/genres/service/genre-api");
 
 const server = new ApolloServer({
   typeDefs,
@@ -16,7 +16,7 @@ const server = new ApolloServer({
   },
   dataSources: () => {
     return {
-      // userAPI: new UserAPI(),
+      userAPI: new UserAPI(),
       genreAPI: new GenreAPI(),
     };
   },

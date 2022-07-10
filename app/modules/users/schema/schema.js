@@ -1,6 +1,6 @@
 const { gql } = require("apollo-server");
 
-const typeDefs = gql`
+const userTypeDefs = gql`
   type Query {
     "Fetch a specific user, provided a user's ID"
     user(_id: ID!): User!
@@ -8,7 +8,7 @@ const typeDefs = gql`
     jwt(email: String!, password: String!): JWT!
   }
   type Mutation {
-    create(
+    createUser(
       firstName: String!
       lastName: String!
       email: String!
@@ -37,4 +37,4 @@ const typeDefs = gql`
   }
 `;
 
-module.exports = typeDefs;
+module.exports = userTypeDefs;

@@ -1,4 +1,4 @@
-const resolvers = {
+const userResolvers = {
   Query: {
     // get a single user by ID, for the user page
     user: async (_, { _id }, { dataSources }) => {
@@ -14,7 +14,7 @@ const resolvers = {
   },
 
   Mutation: {
-    create: async (
+    createUser: async (
       _,
       { firstName, lastName, email, password },
       { dataSources }
@@ -30,4 +30,4 @@ const resolvers = {
   },
 };
 
-module.exports = resolvers;
+module.exports = userResolvers;
