@@ -30,6 +30,19 @@ class genreAPI extends RESTDataSource {
     });
     return data;
   }
+  async updateGenre(_id, name, description, country, year) {
+    const data = await this.put(`v1/genres/${_id}`, {
+      name,
+      description,
+      country,
+      year,
+    });
+    return data;
+  }
+  async deleteGenre(_id) {
+    const data = await this.delete(`v1/genres/${_id}`);
+    return data;
+  }
 }
 
 module.exports = genreAPI;

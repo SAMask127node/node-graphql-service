@@ -11,11 +11,7 @@ const server = new ApolloServer({
   csrfPrevention: true,
   cache: "bounded",
   context: ({ req }) => {
-    // console.log("reqsosjndovnsd    :    ", req);
-    // console.log(req.headers);
-    // console.log("reqsosjndovnsd    :    ", req.headers.authorization);
     const token = req.headers.authorization || "";
-    // Add the user to the context
     return { token };
   },
   dataSources: () => {

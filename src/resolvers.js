@@ -17,9 +17,8 @@ const resolvers = {
     create: async (
       _,
       { name, description, country, year },
-      { dataSources, token }
+      { dataSources }
     ) => {
-      console.log("resolver token : ", token);
       year = parseInt(year);
       const data = await dataSources.genreAPI.createGenre(
         name,
@@ -27,6 +26,25 @@ const resolvers = {
         country,
         year
       );
+      return data;
+    },
+    update: async (
+      _,
+      { _id, name, description, country, year },
+      { dataSources }
+    ) => {
+      year = parseInt(year);
+      const data = await dataSources.genreAPI.updateGenre(
+        _id,
+        name,
+        description,
+        country,
+        year
+      );
+      return data;
+    },
+    delete: async (_, { _id }, { dataSources }) => {
+      const data = await dataSources.genreAPI.deleteGenre(_id);
       return data;
     },
   },

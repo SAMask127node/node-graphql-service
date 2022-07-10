@@ -15,6 +15,14 @@ const typeDefs = gql`
       country: String!
       year: String!
     ): Genre!
+    update(
+      _id: ID!
+      name: String!
+      description: String!
+      country: String!
+      year: String!
+    ): Genre!
+    delete(_id: ID!): DeletedStatus!
   }
 
   type GenresInfo {
@@ -25,6 +33,12 @@ const typeDefs = gql`
     offset: Int
 
     total: Int
+  }
+
+  type DeletedStatus {
+    acknowledged: Boolean
+
+    deletedCount: Int
   }
 
   type Genre {
