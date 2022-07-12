@@ -1,9 +1,13 @@
 Task: https://github.com/AlreadyBored/nodejs-assignments/blob/main/assignments/graphql-service/assignment.md
+
 Task Score:  https://github.com/AlreadyBored/nodejs-assignments/blob/main/assignments/graphql-service/score.md
+
 Deadline: 10.07.2022 23:59
+
 Score: 330 / 490
 
 To run the application: 
+
 1. Download and run microservices that were provided: https://github.com/rolling-scopes-school/node-graphql-service
   - Download Docker desktop
   - Download Mongo (Optionally)
